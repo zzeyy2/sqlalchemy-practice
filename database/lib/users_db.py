@@ -1,10 +1,11 @@
 from database.models import User
 from database.exec_files import AsyncSession
 import utils
-from typing import Union
+
+from typing import Union, NoReturn
 
 
-async def add_user(user_id: int, username: str, full_name: Union[str, tuple]):
+async def add_user(user_id: int, username: str, full_name: Union[str, tuple]) -> NoReturn:
     """Добавить пользователя в базу данных
 
     Args:
